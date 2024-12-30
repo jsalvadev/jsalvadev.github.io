@@ -6,7 +6,7 @@ export default function BadgeComponent() {
       variant="secondary"
       className="py-1 text-sm"
     >
-      💛 Available for part-time freelance opportunities
+      ❤️ Available for part-time freelance opportunities
     </Badge>
   );
 }

@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  company: string;
+  date: string;
+}
+
+const { title, description, company, date } = Astro.props;
+---
+
+<div class="flex gap-x-3">
+  <div class="w-32 text-end">
+    <span class="text-sm text-gray-600 font-light whitespace-nowrap">
+      {date}
+    </span>
+  </div>
+
+  <div
+    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200"
+  >
+    <div class="relative z-10 size-7 flex justify-center items-center">
+      <div class="size-2 rounded-full bg-teal-400/60"></div>
+    </div>
+  </div>
+
+  <div class="grow pt-0.5 pb-8">
+    <h3 class="flex gap-x-1.5 font-semibold text-teal-400/90 text-lg">
+      {title}
+    </h3>
+
+    <p class="text-sm text-gray-300 mt-1 font-medium">{company}</p>
+    {description && <p class="mt-2 text-sm text-gray-500 text-pretty leading-relaxed">{description}</p>}
+  </div>
+</div>

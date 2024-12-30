@@ -1,0 +1,34 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+import SectionContainer from './SectionContainer.astro';
+
+const EXPERIENCE_ITEMS = [
+  {
+    date: 'Current',
+    title: 'Front-End Developer (Angular)',
+    description:
+      'Contributing to the migration from Angular 10 to Angular 17 for the internal Employees application. Implementing unit tests to achieve 50% code coverage, and optimizing code by resolving interface issues and lint errors.',
+    company: 'Vueling Airlines'
+  },
+  {
+    date: 'Nov 2023',
+    title: 'Intership as Back-End Developer (Java)',
+    description:
+      'Working with Java, Spring Boot, and SQL while learning advanced testing concepts with JUnit and Mockito. Contributing to project development through active participation in team meetings and code reviews.',
+    company: 'Endesa Spain'
+  }
+];
+---
+
+<SectionContainer>
+  {
+    EXPERIENCE_ITEMS.map(item => (
+      <ExperienceItem
+        date={item.date}
+        title={item.title}
+        description={item.description}
+        company={item.company}
+      />
+    ))
+  }
+</SectionContainer>
