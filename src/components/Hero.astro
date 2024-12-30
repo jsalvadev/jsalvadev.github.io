@@ -1,0 +1,29 @@
+---
+import AvatarComponent from './react/AvatarComponent';
+import BadgeComponent from './react/BadgeComponent';
+import SectionContainer from './SectionContainer.astro';
+---
+
+<SectionContainer>
+  <div class="flex space-x-8">
+    <AvatarComponent client:load />
+    <div class="flex flex-col items-center justify-center">
+      <BadgeComponent client:load />
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <p class="text-3xl font-bold">Hi, I'm Salvador Jesus</p>
+    <p class="text-xl mt-5">
+      <span class="text-teal-400/90">
+        <span class="underline underline-offset-4">Front-End Developer (Angular)</span>
+        at Vueling Airlines.
+      </span>
+    </p>
+
+    <p class="text-lg mt-4 text-gray-300/90 text-pretty max-w-[600px]">
+      +1 year of experience, currently based in Barcelona, Spain 🇪🇸. Building digital experiences in the airline
+      industry while exploring new ways to enhance web development.
+    </p>
+  </div>
+</SectionContainer>

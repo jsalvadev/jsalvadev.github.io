@@ -1,6 +1,6 @@
 ---
 import Header from '@/components/Header.astro';
-import ContainerMain from '@/components/ContainerMain.astro';
+import MainContainer from '@/components/MainContainer.astro';
 import '@fontsource-variable/inter';
 ---
 
@@ -31,12 +31,12 @@ import '@fontsource-variable/inter';
       </div>
     </div>
 
-    <ContainerMain>
+    <MainContainer>
       <Header />
       <main class="">
         <slot />
       </main>
-    </ContainerMain>
+    </MainContainer>
   </body>
 </html>
 
