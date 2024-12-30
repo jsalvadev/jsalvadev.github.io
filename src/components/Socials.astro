@@ -1,0 +1,40 @@
+---
+import MailIcon from '@/assets/icons/mail.astro';
+import Linkedin from '@/assets/icons/linkedin.astro';
+import Github from '@/assets/icons/github.astro';
+---
+
+<div class="mt-8 flex space-x-4">
+  <a
+    href="mailto:salvadorjesus.freelance@gmail.com"
+    class="social-link border-teal-400/80"
+  >
+    <MailIcon />
+    Contact me
+  </a>
+  <a
+    href="https://www.linkedin.com/in/gallianoms/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link border-teal-400/70"
+  >
+    <Linkedin />
+    LinkedIn
+  </a>
+  <a
+    href="https://github.com/salvadorjdev"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link border-teal-400/60"
+  >
+    <Github />
+    Github
+  </a>
+</div>
+
+<style>
+  .social-link {
+    @apply rounded-full px-3 py-1 border border-solid text-sm flex items-center gap-2
+    transition-colors duration-200 hover:text-teal-400 hover:border-teal-400;
+  }
+</style>
