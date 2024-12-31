@@ -1,16 +1,15 @@
 ---
-// @ts-nocheck
-import AvatarComponent from './react/AvatarComponent';
-import BadgeComponent from './react/BadgeComponent';
+import Avatar from './Avatar.astro';
+import Badge from './Badge.astro';
 import SectionContainer from './SectionContainer.astro';
 import Socials from './Socials.astro';
 ---
 
 <SectionContainer>
   <div class="flex space-x-8">
-    <AvatarComponent client:load />
+    <Avatar />
     <div class="flex flex-col items-center justify-center">
-      <BadgeComponent client:load />
+      <Badge />
     </div>
   </div>
 
