@@ -1,6 +1,7 @@
 ---
 import ExperienceItem from './ExperienceItem.astro';
 import SectionContainer from './SectionContainer.astro';
+import SectionTitle from './SectionTitle.astro';
 
 const EXPERIENCE_ITEMS = [
   {
@@ -21,10 +22,7 @@ const EXPERIENCE_ITEMS = [
 ---
 
 <SectionContainer>
-  <div class="flex items-center gap-2">
-    <div class="w-1 h-8 bg-teal-400/60 rounded"></div>
-    <p class="text-2xl font-light text-slate-50/90">Work Experience</p>
-  </div>
+  <SectionTitle title="Work Experience" />
   {
     EXPERIENCE_ITEMS.map(item => (
       <ExperienceItem
