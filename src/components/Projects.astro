@@ -1,0 +1,62 @@
+---
+import SectionContainer from './SectionContainer.astro';
+import SectionTitle from './SectionTitle.astro';
+import ProjectItem from './ProjectItem.astro';
+
+interface ProjectItem {
+  title: string;
+  image: string;
+  className: string;
+  link?: string;
+}
+
+const PROJECT_ITEMS: ProjectItem[] = [
+  {
+    title: 'Minimalistic Planning Poker for teams',
+    image: '/project1.webp',
+    className: 'md:col-span-2 md:row-span-2',
+    link: 'https://pppeople.vercel.app/welcome'
+  },
+  {
+    title: 'Space ready for your next Project ...',
+    image: 'project2.webp',
+    className: 'md:col-span-1 md:row-span-1'
+  },
+  {
+    title: 'Library with filters and persistence',
+    image: '/project5.webp',
+    className: 'md:col-span-1 md:row-span-1 lg:row-span-3 ',
+    link: 'https://gallianoms-01.vercel.app/'
+  },
+  {
+    title: 'Pokemon Cards filter',
+    image: '/project3.webp',
+    className: 'md:col-span-1 md:row-span-1 lg:row-span-2',
+    link: 'https://pokedux-platzi.vercel.app/'
+  },
+  {
+    title: 'Players futbols cards',
+    image: 'project4.webp',
+    className: 'md:col-span-1 md:row-span-1 lg:row-span-2'
+  }
+];
+---
+
+<SectionContainer>
+  <SectionTitle title="Featured Projects" />
+
+  <div class="overflow-hidden max-w-5xl rounded-lg p-4">
+    <div class="grid max-h-screen h-auto p-4 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-4">
+      {
+        PROJECT_ITEMS.map(project => (
+          <ProjectItem
+            title={project.title}
+            image={project.image}
+            className={project.className}
+            link={project.link}
+          />
+        ))
+      }
+    </div>
+  </div>
+</SectionContainer>
