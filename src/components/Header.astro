@@ -18,7 +18,7 @@ const NAV_ITEMS = [
   {
     title: 'CV',
     label: 'cv',
-    url: '/#cv'
+    url: '/SalvadorJesus_CV.pdf'
   },
   {
     title: 'Contact',
@@ -32,15 +32,27 @@ const NAV_ITEMS = [
   <nav class="flex justify-center">
     <div class="w-1/3 flex justify-between bg-slate-950/50 backdrop-blur-sm z-50 py-3 px-6 top-0 fixed">
       {
-        NAV_ITEMS.map(item => (
-          <a
-            href={item.url}
-            class="nav-link"
-            aria-label={item.label}
-          >
-            {item.title}
-          </a>
-        ))
+        NAV_ITEMS.map(item =>
+          item.label === 'cv' ? (
+            <a
+              href={item.url}
+              class="nav-link"
+              aria-label={item.label}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.title}
+            </a>
+          ) : (
+            <a
+              href={item.url}
+              class="nav-link"
+              aria-label={item.label}
+            >
+              {item.title}
+            </a>
+          )
+        )
       }
     </div>
   </nav>
