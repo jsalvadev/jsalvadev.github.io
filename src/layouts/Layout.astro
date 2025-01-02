@@ -3,12 +3,18 @@ import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
 import MainContainer from '@/components/MainContainer.astro';
 import '@fontsource-variable/inter';
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content={description}
+    />
     <meta
       name="viewport"
       content="width=device-width"
@@ -22,7 +28,7 @@ import '@fontsource-variable/inter';
       name="generator"
       content={Astro.generator}
     />
-    <title>Astro Basics</title>
+    <title>{title}</title>
   </head>
   <body class="min-h-screen bg-slate-950">
     <div class="fixed inset-0 -z-10">
@@ -34,7 +40,7 @@ import '@fontsource-variable/inter';
 
     <MainContainer>
       <Header />
-      <main class="">
+      <main>
         <slot />
       </main>
       <Footer />
