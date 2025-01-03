@@ -2,11 +2,12 @@
 interface Props {
   title: string;
   image: string;
+  altImage: string;
   className: string;
   link?: string;
 }
 
-const { title, image, className, link } = Astro.props;
+const { title, image, altImage, className, link } = Astro.props;
 ---
 
 <a
@@ -16,7 +17,7 @@ const { title, image, className, link } = Astro.props;
   rel="noopener noreferrer"
 >
   <img
-    alt={title}
+    alt={altImage}
     src={image}
     class="absolute h-full w-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-50"
   />
