@@ -8,13 +8,14 @@ interface Props {
 }
 
 const { title, image, altImage, className, link } = Astro.props;
+const Element = link ? 'a' : 'div';
+const CommonClasses = `group relative flex overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.02] ${className}`;
+const props = link ? { href: link, target: '_blank', rel: 'noopener noreferrer' } : {};
 ---
 
-<a
-  class={`group relative flex overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.02] ${className}`}
-  href={link}
-  target="_blank"
-  rel="noopener noreferrer"
+<Element
+  class={CommonClasses}
+  {...props}
 >
   <img
     alt={altImage}
@@ -23,8 +24,6 @@ const { title, image, altImage, className, link } = Astro.props;
   />
   <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
   <div class="relative flex h-full w-full flex-col justify-end p-6 text-white">
-    <h2 class="mb-2 text-xl font-bold leading-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-      {title}
-    </h2>
+    <h2 class="mb-2 text-xl font-bold leading-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">{title}</h2>
   </div>
-</a>
+</Element>
