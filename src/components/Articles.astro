@@ -1,0 +1,54 @@
+---
+import ArticleCard from './ArticleCard.astro';
+import SectionContainer from './SectionContainer.astro';
+import SectionTitle from './SectionTitle.astro';
+
+const ARTICLE_ITEMS = [
+  {
+    title: '💛⚠️ Lint para Angular. Guía de Configuración Paso a Paso',
+    description:
+      'En un artículo anterior, configuramos Prettier para mantener un formato consistente. El siguiente paso es la integración con ESLint para analizar la calidad del código y detectar inconsistencias según las mejores prácticas adoptadas por la comunidad Angular. ',
+    date: '8 de noviembre de 2024',
+    url: 'https://www.linkedin.com/pulse/lint-para-angular-gu%C3%ADa-de-configuraci%C3%B3n-paso-salvador-jesus--txf0f/'
+  },
+  {
+    title: '💛🫦 Prettier para Angular. Guía de Configuración + Ejemplos',
+    description:
+      'El formateo consistente del código es esencial para mantener la legibilidad y calidad de tu proyecto. Te explico cómo configurar @Prettier en Angular para conseguir un estilo de código uniforme. Para probar diferentes configuraciones puedes utilizar el playground oficial de Prettier en: https://prettier.io/playground/.',
+    date: '7 de noviembre de 2024',
+    url: 'https://www.linkedin.com/pulse/prettier-para-angular-gu%C3%ADa-de-configuraci%C3%B3n-ejemplos--4qg5f/'
+  },
+  {
+    title:
+      '💛📄 ¿Sabes destacar tu CV (currículum) para un puesto TECH? Con este CV entré a trabajar en Capitole y Vueling.',
+    description:
+      'Si no sabes por donde empezar, o peor, llevas tiempo sin resultados con los Reclutadores de IT, quiero hacerte la vida mas facil. Resumake.io es una herramienta gratuita que permite crear CVs profesionales y exportarlos en PDF y JSON (útil para modificaciones futuras).',
+    date: '3 de noviembre de 2024',
+    url: 'https://www.linkedin.com/posts/jsalvadev_salvadorjesuscv-activity-7258858493212835840-awpz?utm_source=share&utm_medium=member_desktop'
+  },
+  {
+    title: '💛🇬🇧 El Inglés es clave. No es solo un idioma, es la herramienta para crecer como desarrollador.',
+    description:
+      'El inglés es fundamental en el desarrollo de software, ya que la mayoría de la documentación, recursos y comunidades están en este idioma. No es necesario dominarlo perfectamente, sino tener disposición para aprender.',
+    date: '2 de noviembre de 2024',
+    url: 'https://www.linkedin.com/pulse/el-ingles-es-la-clave-solo-un-idioma-una-herramienta-esencial--r0p4f/'
+  }
+];
+---
+
+<SectionContainer title="Articles">
+  <SectionTitle
+    title="Latest Articles"
+    id="articles"
+  />
+  {
+    ARTICLE_ITEMS.map(item => (
+      <ArticleCard
+        title={item.title}
+        description={item.description}
+        date={item.date}
+        url={item.url}
+      />
+    ))
+  }
+</SectionContainer>

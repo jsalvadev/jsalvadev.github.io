@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  url: string;
+}
+
+const { title, description, date, url } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="block mt-5 no-underline hover:scale-[1.01] transition-all duration-300"
+>
+  <article
+    class="bg-gray-900/60 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 max-w-[70ch] w-full border border-gray-800/40"
+  >
+    <div class="p-3 flex flex-col justify-between">
+      <div>
+        <h3 class="text-base font-semibold text-steal-50 mb-1 text-pretty">{title}</h3>
+        <p class="text-sm text-gray-300 line-clamp-2 text-pretty leading-relaxed">{description}</p>
+      </div>
+      <p class="text-xs text-gray-400 mt-2">{date}</p>
+    </div>
+  </article>
+</a>
