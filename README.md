@@ -6,6 +6,8 @@
 
 ## 🚀 About Me
 
+Hi, I'm Salva, Front-End Developer (Angular) at Vueling Airlines.
++1 year of experience, based in Barcelona, Spain 🇪🇸. Building experiences in the airline industry, taking on freelance projects, and sharing my journey through content creation.
 Hi, I'm Salva, Front-End Developer (Angular) at Vueling Airlines. With over 1 year of experience, based in Barcelona, Spain 🇪🇸. I specialize in building digital experiences for the airline industry, taking on freelance projects, and sharing my journey through content creation.
 
 ![Portfolio Preview](public/screenshots/preview-desktop.webp)
