@@ -8,11 +8,11 @@ const { title, id } = Astro.props;
 ---
 
 <div class="flex items-center gap-2">
-  <div class="w-1 h-8 rounded bg-teal-500 dark:bg-teal-400/60"></div>
-  <p
-    class="text-2xl font-light text-gray-900 dark:text-slate-50/90 scroll-mt-24"
+  <div class="w-1 h-8 rounded bg-light-accent-primary dark:bg-dark-accent-primary"></div>
+  <h2
+    class="text-heading-xs text-light-text-primary dark:text-dark-text-primary scroll-mt-24"
     id={id}
   >
     {title}
-  </p>
+  </h2>
 </div>
