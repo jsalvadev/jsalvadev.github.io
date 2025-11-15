@@ -7,7 +7,7 @@ import Github from '@/assets/icons/github.astro';
 <div class="flex mt-8 space-x-4">
   <a
     href="mailto:salvadorjesus.freelance@gmail.com"
-    class="social-link border-teal-400/80"
+    class="social-link"
   >
     <MailIcon />
     Contact me
@@ -16,7 +16,7 @@ import Github from '@/assets/icons/github.astro';
     href="https://www.linkedin.com/in/gallianoms/"
     target="_blank"
     rel="noopener noreferrer"
-    class="social-link border-teal-400/70"
+    class="social-link"
   >
     <Linkedin />
     LinkedIn
@@ -25,7 +25,7 @@ import Github from '@/assets/icons/github.astro';
     href="https://github.com/jsalvadev"
     target="_blank"
     rel="noopener noreferrer"
-    class="social-link border-teal-400/60"
+    class="social-link"
   >
     <Github />
     Github
@@ -34,7 +34,11 @@ import Github from '@/assets/icons/github.astro';
 
 <style>
   .social-link {
-    @apply rounded-full px-3 py-1 border border-solid text-sm flex items-center gap-2
-    text-gray-700 dark:text-gray-300 transition-colors duration-200 hover:text-teal-500 dark:hover:text-teal-400 hover:border-teal-500 dark:hover:border-teal-400;
+    @apply rounded-full px-3 py-1 border border-solid text-body-sm flex items-center gap-2
+    text-light-text-secondary dark:text-dark-text-secondary
+    border-light-border-subtle dark:border-dark-border-subtle
+    transition-colors duration-200
+    hover:text-light-accent-primary dark:hover:text-dark-accent-primary
+    hover:border-light-accent-primary dark:hover:border-dark-accent-primary;
   }
 </style>

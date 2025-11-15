@@ -18,7 +18,7 @@ import SectionTitle from './SectionTitle.astro';
       />
     </div>
     <div class="md:col-span-4">
-      <article class="mt-3 space-y-5">
+      <article class="mt-3 space-y-5 text-body-lg text-light-text-secondary dark:text-dark-text-secondary">
         <p class="text-pretty">
           My name is Salvador Jesus, but I prefer to go by Salva. I started programming with C++ and Codeblocks at 18
           years old, with no prior knowledge. Today, <span>I work as a frontend developer at Vueling</span>, one of the
@@ -41,9 +41,6 @@ import SectionTitle from './SectionTitle.astro';
 
 <style>
   span {
-    color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(to right, rgb(153 246 228), rgb(20 184 166));
-    font-weight: 500;
+    @apply text-light-accent-primary dark:text-dark-accent-primary font-medium;
   }
 </style>

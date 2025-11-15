@@ -2,7 +2,6 @@
 import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
 import MainContainer from '@/components/MainContainer.astro';
-import '@fontsource-variable/inter';
 
 const { title, description } = Astro.props;
 const image = Astro.props.image ?? 'twitter-card.png';
@@ -73,10 +72,10 @@ const image = Astro.props.image ?? 'twitter-card.png';
       content={new URL(image, Astro.url)}
     />
   </head>
-  <body class="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+  <body class="min-h-screen bg-light-bg-primary dark:bg-dark-bg-primary transition-colors duration-300">
     <div class="fixed inset-0 -z-10">
       <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#E4E4E4_1px,transparent_1px),linear-gradient(to_bottom,#E4E4E4_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#2A2A2A_1px,transparent_1px),linear-gradient(to_bottom,#2A2A2A_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
       >
       </div>
     </div>
@@ -97,17 +96,57 @@ const image = Astro.props.image ?? 'twitter-card.png';
     color-scheme: light dark;
   }
 
+  /* Helvetica Now font-face declarations */
+  /* NOTE: You need to acquire Helvetica Now (commercial font) and place the font files in /public/fonts/ */
+  /* Example structure:
+     /public/fonts/HelveticaNowDisplay-Bold.woff2
+     /public/fonts/HelveticaNowText-Regular.woff2
+     etc.
+  */
+
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    src: url('/fonts/HelveticaNowDisplay-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('/fonts/HelveticaNowText-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('/fonts/HelveticaNowText-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('/fonts/HelveticaNowText-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
     margin: 0;
-    color: #1e293b;
-    font-family: 'Inter Variable', sans-serif;
+    color: #1A1A1A;
+    font-family: 'Helvetica Now Text', system-ui, -apple-system, sans-serif;
   }
 
   .dark body {
-    color: #f8fafc;
+    color: #EDEDED;
   }
 </style>
