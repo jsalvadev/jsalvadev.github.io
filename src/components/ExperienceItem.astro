@@ -11,25 +11,25 @@ const { title, description, company, date } = Astro.props;
 
 <article class="flex mt-5 gap-x-3">
   <div class="w-32 text-end">
-    <span class="text-sm font-light text-gray-600 whitespace-nowrap">
+    <span class="text-sm font-light text-gray-500 dark:text-gray-600 whitespace-nowrap">
       {date}
     </span>
   </div>
 
   <div
-    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200"
+    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-300 dark:after:bg-gray-200"
   >
     <div class="relative z-10 flex items-center justify-center size-7">
-      <div class="rounded-full size-2 bg-teal-400/60"></div>
+      <div class="rounded-full size-2 bg-teal-500 dark:bg-teal-400/60"></div>
     </div>
   </div>
 
   <div class="grow pt-0.5 pb-8">
-    <h3 class="flex gap-x-1.5 font-semibold text-teal-400/90 text-lg">
+    <h3 class="flex gap-x-1.5 font-semibold text-teal-500 dark:text-teal-400/90 text-lg">
       {title}
     </h3>
 
-    <p class="mt-1 text-sm font-medium text-gray-300">{company}</p>
-    {description && <p class="mt-2 text-sm leading-relaxed text-gray-500 text-pretty">{description}</p>}
+    <p class="mt-1 text-sm font-medium text-gray-600 dark:text-gray-300">{company}</p>
+    {description && <p class="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-500 text-pretty">{description}</p>}
   </div>
 </article>
