@@ -29,7 +29,7 @@ export default {
       colors: {
         light: {
           bg: {
-            primary: '#F7F7F7',
+            primary: '#fcfcfc',
             surface: '#FFFFFF'
           },
           text: {
@@ -46,7 +46,7 @@ export default {
         },
         dark: {
           bg: {
-            primary: '#0F0F0F',
+            primary: '#181818',
             surface: '#1C1C1C'
           },
           text: {
