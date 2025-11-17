@@ -47,7 +47,7 @@ export default {
         dark: {
           bg: {
             primary: '#181818',
-            surface: '#1C1C1C'
+            surface: '#181818'
           },
           text: {
             primary: '#EDEDED',
